@@ -1,0 +1,10 @@
+#!/bin/env sh
+
+# Note that these are just example queries, the better thing to do is look at the bugs on bugzilla using one of these kinds of searches to understand how the particular project is managed
+wget 'https://bugzilla.mozilla.org/buglist.cgi?keywords=sec-critical%2C%20sec-high%2C%20sec-incident%2C%20sec-low%2C%20sec-moderate%2C%20sec-vector%2C%20&keywords_type=anywords&product=Core&product=Firefox&product=Firefox%20for%20Android&product=Firefox%20for%20iOS&product=Firefox%20OS&product=Focus&product=Focus-iOS&product=NSS&product=Privacy&product=Servo&query_format=advanced&resolution=FIXED&short_desc=stagefright&short_desc_type=allwordssubstr&ctype=csv' -O stagefright.csv
+
+wget 'https://bugzilla.mozilla.org/buglist.cgi?component=Internationalization&keywords=sec-critical%2C%20sec-high%2C%20sec-incident%2C%20sec-low%2C%20sec-moderate%2C%20sec-vector%2C%20&keywords_type=anywords&longdesc=uconv&longdesc_type=allwordssubstr&product=Core&product=Firefox&product=Firefox%20for%20Android&product=Firefox%20for%20iOS&product=Firefox%20OS&product=Focus&product=Focus-iOS&product=NSS&product=Privacy&product=Servo&query_format=advanced&resolution=FIXED&ctype=csv' - O uconv.csv
+
+wget 'https://bugzilla.mozilla.org/buglist.cgi?component=CSS%20Parsing%20and%20Computation&keywords=sec-critical%2C%20sec-high%2C%20sec-incident%2C%20sec-low%2C%20sec-moderate%2C%20sec-vector%2C%20&keywords_type=anywords&product=Core&product=Firefox&product=Firefox%20for%20Android&product=Firefox%20for%20iOS&product=Firefox%20OS&product=Focus&product=Focus-iOS&product=NSS&product=Privacy&product=Servo&query_format=advanced&resolution=FIXED&ctype=csv&human=1' -O css.csv
+
+wget 'https://bugzilla.mozilla.org/buglist.cgi?component=XPCOM&keywords=sec-critical%2C%20sec-high%2C%20sec-incident%2C%20sec-low%2C%20sec-moderate%2C%20sec-vector%2C%20&keywords_type=anywords&product=Core&product=Firefox&product=Firefox%20for%20Android&product=Firefox%20for%20iOS&product=Firefox%20OS&product=Focus&product=Focus-iOS&product=NSS&product=Privacy&product=Servo&query_format=advanced&resolution=FIXED&ctype=csv' -O xpcom.csv
